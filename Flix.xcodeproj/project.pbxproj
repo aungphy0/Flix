@@ -16,6 +16,7 @@
 		3D9DAAE9211513CF00F961FD /* FlixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9DAAE8211513CF00F961FD /* FlixUITests.swift */; };
 		3DC7475C21151BDD00DE260C /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC7475B21151BDD00DE260C /* NowPlayingViewController.swift */; };
 		3DC7475E21151D8E00DE260C /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC7475D21151D8E00DE260C /* MovieCell.swift */; };
+		3DC7476221152E0500DE260C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC7476121152E0500DE260C /* DetailViewController.swift */; };
 		B0942B9A48AD7633073A49D9 /* Pods_FlixUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9103453604DDA93E554A9EE /* Pods_FlixUITests.framework */; };
 		B4E9942BD7CDF6290993D6AD /* Pods_FlixTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41590B06215AECCFE92B40D2 /* Pods_FlixTests.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		3D9DAAEA211513CF00F961FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DC7475B21151BDD00DE260C /* NowPlayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewController.swift; sourceTree = "<group>"; };
 		3DC7475D21151D8E00DE260C /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		3DC7476121152E0500DE260C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		41590B06215AECCFE92B40D2 /* Pods_FlixTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlixTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52A4DA78E2F4099FE55B10C9 /* Pods-FlixTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlixTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlixTests/Pods-FlixTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9C433B82C8608673F2C4F9D7 /* Pods-FlixUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlixUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlixUITests/Pods-FlixUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,13 +118,13 @@
 		3D9DAAC7211513CE00F961FD /* Flix */ = {
 			isa = PBXGroup;
 			children = (
-				3DC7475B21151BDD00DE260C /* NowPlayingViewController.swift */,
+				3DC7476021152DD900DE260C /* Views */,
+				3DC7475F21152DC200DE260C /* View Controllers */,
 				3D9DAAC8211513CE00F961FD /* AppDelegate.swift */,
 				3D9DAACC211513CE00F961FD /* Main.storyboard */,
 				3D9DAACF211513CF00F961FD /* Assets.xcassets */,
 				3D9DAAD1211513CF00F961FD /* LaunchScreen.storyboard */,
 				3D9DAAD4211513CF00F961FD /* Info.plist */,
-				3DC7475D21151D8E00DE260C /* MovieCell.swift */,
 			);
 			path = Flix;
 			sourceTree = "<group>";
@@ -143,6 +145,23 @@
 				3D9DAAEA211513CF00F961FD /* Info.plist */,
 			);
 			path = FlixUITests;
+			sourceTree = "<group>";
+		};
+		3DC7475F21152DC200DE260C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3DC7475B21151BDD00DE260C /* NowPlayingViewController.swift */,
+				3DC7476121152E0500DE260C /* DetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		3DC7476021152DD900DE260C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3DC7475D21151D8E00DE260C /* MovieCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		5BE95FEF6AD4D59EB798350A /* Pods */ = {
@@ -383,6 +402,7 @@
 				3DC7475C21151BDD00DE260C /* NowPlayingViewController.swift in Sources */,
 				3D9DAAC9211513CE00F961FD /* AppDelegate.swift in Sources */,
 				3DC7475E21151D8E00DE260C /* MovieCell.swift in Sources */,
+				3DC7476221152E0500DE260C /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
