@@ -35,7 +35,6 @@ class DetailViewController: UIViewController {
             backDropImageView.af_setImage(withURL: backdropUrl)
             let posterUrl = URL(string: baseUrlString + posterPathString)!
             posterImageView.af_setImage(withURL: posterUrl)
-            
         }
        
     }

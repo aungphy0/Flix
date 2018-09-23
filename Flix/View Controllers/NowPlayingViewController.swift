@@ -16,9 +16,12 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource,UITableV
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+ 
+        self.activityIndicator.startAnimating()
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = 220
@@ -43,7 +46,21 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource,UITableV
         let task = session.dataTask(with: request) { (data, response, error) in
             //This will run when the network request return
             if let error = error {
+                //print error message to console
                 print(error.localizedDescription)
+                let alertController = UIAlertController(title: "Cannot Get Movies", message: error.localizedDescription, preferredStyle: .alert)
+                // create a cancel action
+                let cancelAction = UIAlertAction(title: "Try Again", style: .cancel) { (action) in
+                    // handle cancel response here. Doing nothing will dismiss the view.
+                    self.activityIndicator.startAnimating()
+                   
+                }
+                // add the cancel action to the alertController
+                alertController.addAction(cancelAction)
+                
+                DispatchQueue.main.async {
+                    self.present(alertController, animated: true, completion: nil)
+                }
             }else if let data = data {
                 let dataDictionary = try! JSONSerialization.jsonObject(with:
                     data, options: []) as! [String: Any]
@@ -51,6 +68,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource,UITableV
                 self.movies = movies
                 self.tableView.reloadData()
                 self.refreshControl.endRefreshing()
+                self.activityIndicator.stopAnimating()
             }
         }
         
